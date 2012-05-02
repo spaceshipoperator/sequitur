@@ -1,0 +1,37 @@
+//http://stackoverflow.com/questions/1147359/how-to-decode-html-entities-using-jquery
+script
+  $(function() {
+      var data = JSON.parse($("<div/>").html("#{data}").text());
+      var columns = JSON.parse($("<div/>").html("#{columns}").text());
+      var editor = ace.edit("editor");
+      editor.getSession().setValue("#{query}");
+    
+      var sqlMode = require("ace/mode/sql").Mode;
+      editor.getSession().setMode(new sqlMode());
+
+      var grid;
+      
+      var options = {
+          enableCellNavigation: true,
+          enableColumnReorder: false
+      };
+
+      grid = new Slick.Grid("#results", data, columns, options);
+      
+      editor.commands.addCommand({
+          name: 'myCommand',
+          bindKey: {
+              win: 'Ctrl-Return',
+              mac: 'Command-Return',
+              sender: 'editor'
+          },
+          exec: function(env, args, request) {
+              var url = "/" + editor.getSession().getValue();    
+              $(location).attr('href',url);
+          }
+      });
+
+   });
+
+div#editor
+div#results

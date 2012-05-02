@@ -1,0 +1,13 @@
+#editor {
+    position: absolute;
+    width: 92%;
+    height: 60%;
+    left: 4%;
+}
+#results {
+    position: absolute;
+    width: 92%;
+    top: 65%;
+    height: 35%;
+    left: 4%;
+}

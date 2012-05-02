@@ -1,0 +1,45 @@
+* sequitur
+   
+** declaration
+   
+   sequitur is (to be) a Structured Query Language (SQL) editor and data analyzer.
+
+   sequitur is platform independent, runs in a standards compliant web browser and connects to any Relational Database Management System (RDBMS) .
+
+   sequitur supports real-time collaboration and data exploration via rich, interactive visualizations.
+   
+** foundation
+   
+   Much of the data available that we need in order to make informed decisions exists within various implementations of RDBMS.  SQL is the standardized language to used to manipulate the storage and retrieval of data within RDBMS.  Each RDBMS vendor typically provides client software designed to be installed and used on a single workstation to allow a user to create and execute queries.
+
+   The archictecture of existing tools limit the ability for users to collaborate and do not take advantage of the web as a platform.
+
+** considerations
+   
+   sequitur is very rudimentary at present ([2012-03-26 Mon]) and is being built in my (scarce) spare time.
+
+   If you are interested in contributing to this effort, you can:
+
+   1. fork the repo and give me a pull request    
+   
+   2. contact me via email
+
+   3. hire me to work on it full time
+      
+** resources
+   - node.js
+     - odbc
+   - ace    
+   - slickgrid
+   - jquery
+   - d3js
+   - now.js
+   
+** implementation
+   - [ ] create repo on git hub
+   - [ ] figure out the best way to include the (minimal) dependencies (ie, without having the entire ace repo as a submodule)
+   - [ ] introduce now.js, provide ability to share browser session
+   - [ ] allow for configuration of new database connections
+   - [ ] save query/session (incorporate source control...git, of course)
+     
+ 
